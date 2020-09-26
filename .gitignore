@@ -1,0 +1,5 @@
+**.mlmodel
+**.bin
+ch5/ObjectDetection/ObjectDetection.model/objects.bin
+ch5/ImageSimilarity/ImageSimilarity.mlmodel
+ch2/ImageSimilarityEx/ImageSimilarityEx/ImageSimilarity.mlmodel

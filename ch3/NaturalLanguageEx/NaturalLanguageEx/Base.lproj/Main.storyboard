@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.13.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.9"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NaturalLanguageEx" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Oaj-F1-vVq">
+                                <rect key="frame" x="15.5" y="28" width="344" height="29"/>
+                                <segments>
+                                    <segment title="言語判定"/>
+                                    <segment title="ﾄｰｸﾝ化"/>
+                                    <segment title="タグ付け"/>
+                                    <segment title="レンマ化"/>
+                                    <segment title="固有表現"/>
+                                </segments>
+                                <connections>
+                                    <action selector="onValueChangedWithSender:" destination="BYZ-38-t0r" eventType="valueChanged" id="3m8-wY-veu"/>
+                                </connections>
+                            </segmentedControl>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="With Core ML, you can integrate trained machine learning models into your app." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8Ls-Oo-moF">
+                                <rect key="frame" x="8" y="88" width="359" height="88"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="SG3-uG-k4x"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ftO-Rw-6B5"/>
+                                </connections>
+                            </textView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vi3-kT-1BO">
+                                <rect key="frame" x="8" y="184" width="359" height="475"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWc-TU-QY3">
+                                        <rect key="frame" x="0.0" y="0.0" width="359" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="iWc-TU-QY3" firstAttribute="leading" secondItem="Vi3-kT-1BO" secondAttribute="leading" id="1Xb-VL-7GW"/>
+                                    <constraint firstAttribute="bottom" secondItem="iWc-TU-QY3" secondAttribute="bottom" id="YrK-ro-Jab"/>
+                                    <constraint firstItem="iWc-TU-QY3" firstAttribute="top" secondItem="Vi3-kT-1BO" secondAttribute="top" id="ZcR-A4-9yK"/>
+                                    <constraint firstAttribute="trailing" secondItem="iWc-TU-QY3" secondAttribute="trailing" id="cYx-iM-trL"/>
+                                    <constraint firstItem="iWc-TU-QY3" firstAttribute="width" secondItem="Vi3-kT-1BO" secondAttribute="width" id="udL-rb-LHW"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Oaj-F1-vVq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IYL-sa-htk"/>
+                            <constraint firstItem="Vi3-kT-1BO" firstAttribute="top" secondItem="8Ls-Oo-moF" secondAttribute="bottom" constant="8" id="Kro-bu-g6b"/>
+                            <constraint firstItem="Oaj-F1-vVq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="LBP-77-4Ia"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Vi3-kT-1BO" secondAttribute="bottom" constant="8" id="Lta-aQ-3CW"/>
+                            <constraint firstItem="Vi3-kT-1BO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="RoL-Yg-RMU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8Ls-Oo-moF" secondAttribute="trailing" constant="8" id="YYb-KC-UXo"/>
+                            <constraint firstItem="8Ls-Oo-moF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="cIz-ov-D06"/>
+                            <constraint firstItem="8Ls-Oo-moF" firstAttribute="top" secondItem="Oaj-F1-vVq" secondAttribute="bottom" constant="32" id="g8a-K8-kLP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vi3-kT-1BO" secondAttribute="trailing" constant="8" id="xam-hn-Lrf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="lblText" destination="iWc-TU-QY3" id="xml-6X-mdL"/>
+                        <outlet property="segmentedControl" destination="Oaj-F1-vVq" id="4P2-dQ-yOh"/>
+                        <outlet property="textView" destination="8Ls-Oo-moF" id="thF-fQ-zYy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

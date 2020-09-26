@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="#ffffff"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@null">
+        <LinearLayout
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@null">
+            <Button
+                android:id="@+id/btn_segment_control0"
+                android:layout_alignParentRight="true"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:textStyle="normal"
+                android:textSize="17dp"
+                android:text="オンデバイス"
+                android:textColor="#ffffff"
+                android:textAllCaps="false"
+                android:background="#0000ff"
+                android:enabled="false"
+                android:lines="1"
+                android:ellipsize="end"
+                android:gravity="center" />
+            <Button
+                android:id="@+id/btn_segment_control1"
+                android:layout_alignParentRight="true"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:textStyle="normal"
+                android:textSize="17dp"
+                android:text="クラウド"
+                android:textColor="#0000ff"
+                android:textAllCaps="false"
+                android:background="#d3d3d3"
+                android:enabled="true"
+                android:lines="1"
+                android:ellipsize="end"
+                android:gravity="center" />
+        </LinearLayout>
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:background="@null"/>
+    <net.npaka.textrecognitionex.DrawView
+        android:id="@+id/draw_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@null"/>
+</RelativeLayout>
